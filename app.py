@@ -18,12 +18,6 @@ percent_change_2022 = calculate_percent_change(df_2022)
 percent_change_2023 = calculate_percent_change(df_2023)
 percent_change_2024 = calculate_percent_change(df_2024)
 
-# Calculate percent change from 2022 to 2023
-percent_change_22_23 = ((df_2023.mean() - df_2022.mean()) / df_2022.mean()) * 100
-
-# Calculate percent change from 2023 to 2024
-percent_change_23_24 = ((df_2024.mean() - df_2023.mean()) / df_2023.mean()) * 100
-
 # Plotting all in one visualization using subplots
 fig, axes = plt.subplots(4, 1, figsize=(8, 24))
 
@@ -59,8 +53,9 @@ for bar in bars_2024:
                  ha='center', va='bottom')
 
 # Subplot 3: Trend of Percent Change Over 3 Years
-axes[3].plot(percent_change_22_23.index, percent_change_22_23.values, marker='o', color='skyblue', label='2022-2023')
-axes[3].plot(percent_change_23_24.index, percent_change_23_24.values, marker='o', color='lightgreen', label='2023-2024')
+axes[3].plot(percent_change_2022.index, percent_change_2022.values, marker='o', color='skyblue', label='2022')
+axes[3].plot(percent_change_2023.index, percent_change_2023.values, marker='o', color='lightgreen', label='2023')
+axes[3].plot(percent_change_2024.index, percent_change_2024.values, marker='o', color='salmon', label='2024')
 axes[3].set_title('Trend of Percent Change Over 3 Years')
 axes[3].set_xlabel('Currency')
 axes[3].set_ylabel('Percent Change')
