@@ -14,11 +14,11 @@ https://data.gov.my/data-catalogue/exchangerates
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/myr-exchange-rate-analysis.git
+   git clone https://github.com/yourusername/myr-exchange-rates-trend.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd myr-exchange-rate-analysis
+   cd myr-exchange-rates-trend
    ```
 3. Install the required dependencies:
    ```bash
